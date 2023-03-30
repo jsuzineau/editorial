@@ -25,12 +25,12 @@
 
 <!-- Module Editorial -->
 <div id="editorial_block_center" class="editorial_block">
-	{if $editorial->body_home_logo_link}<a href="{$editorial->body_home_logo_link|escape:'html':'UTF-8'}" title="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}">{/if}
-	{if $homepage_logo}<img class="img-responsive" src="{$link->getMediaLink($image_path)|escape:'html'}" alt="{$editorial->body_title|escape:'html':'UTF-8'|stripslashes}" {if $image_width}width="{$image_width}"{/if} {if $image_height}height="{$image_height}" {/if}/>{/if}
+	{if $editorial->body_home_logo_link}<a href="{$editorial->body_home_logo_link|escape:'html':'UTF-8'}" title="{$editorial->body_title|escape:'html':'UTF-8' nofilter}">{/if}
+	{if $homepage_logo}<img class="img-responsive" src="{$link->getMediaLink($image_path)|escape:'html'}" alt="{$editorial->body_title|escape:'html':'UTF-8' nofilter}" {if $image_width}width="{$image_width}"{/if} {if $image_height}height="{$image_height}" {/if}/>{/if}
 	{if $editorial->body_home_logo_link}</a>{/if}
-	{if $editorial->body_logo_subheading}<p id="editorial_image_legend">{$editorial->body_logo_subheading|stripslashes}</p>{/if}
-	{if $editorial->body_title}<h1>{$editorial->body_title|stripslashes}</h1>{/if}
-	{if $editorial->body_subheading}<h2>{$editorial->body_subheading|stripslashes}</h2>{/if}
-	{if $editorial->body_paragraph}<div class="rte">{$editorial->body_paragraph|stripslashes}</div>{/if}
+	{if $editorial->body_logo_subheading}<p id="editorial_image_legend">{$editorial->body_logo_subheading nofilter}</p>{/if}
+	{if $editorial->body_title}<h1>{$editorial->body_title nofilter}</h1>{/if}
+	{if $editorial->body_subheading}<h2>{$editorial->body_subheading nofilter}</h2>{/if}
+	{if $editorial->body_paragraph}<div class="rte">{$editorial->body_paragraph nofilter}</div>{/if}
 </div>
 <!-- /Module Editorial -->
