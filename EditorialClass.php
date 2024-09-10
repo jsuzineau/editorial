@@ -77,7 +77,7 @@ class EditorialClass extends ObjectModel
 		/* Classical fields */
 		foreach ($_POST as $key => $value)
 		{
-			if (key_exists($key, $this) && $key != 'id_'.$this->table)
+			if (property_exists(get_class($this), $key) && $key != 'id_'.$this->table)
 				$this->{$key} = $value;
 		}
 
